@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAY AMOUR EMPIRE</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #01474b,
+        #0b054f,
+        #41065e,
+        #ffe5ec
+    );
+}
+h1{
+    color:white;
+    font-size:3rem;
+    position:absolute;
+    top:20px;
+    text-shadow:
+        0 0 10px #42e72f,
+        0 0 20px #053130;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.1);
+    }
+}
+
+
+.houses{
+    margin-top:120px;
+    width:95%;
+    max-width:1400px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-bottom:50px;
+}
+
+.houses h2{
+    color:white;
+    font-size:2.5rem;
+    margin-bottom:30px;
+    text-shadow:
+        0 0 10px #42e72f,
+        0 0 20px #053130;
+}
+
+.house-row{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:30px;
+}
+
+.house-card{
+    background:linear-gradient(
+        135deg,
+        #01474b,
+        #015ba9,
+        #41065e,
+        #2c346c
+    );
+    border-radius:20px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.35);
+    transition:0.4s;
+}
+
+.house-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.5);
+}
+
+.house-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.house-card button{
+    width:70%;
+    margin-top:18px;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(
+        45deg,
+        #42e72f,
+        #053130
+    );
+    transition:0.3s;
+}
+
+.house-card button:hover{
+    transform:scale(1.05);
+}
+
+.house-card a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+/* Mobile responsiveness */
+@media (max-width:1100px){
+    .house-row{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media (max-width:700px){
+    .house-row{
+        grid-template-columns:1fr;
+    }
+}
+
+
+button{
+    margin-top:15px;
+    padding:15px 40px;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    background:linear-gradient(
+        45deg,
+        #42e72f,
+        #053130
+    );
+    transition:0.3s;
+}
+
+button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(32,5,67,0.8);
+}
+
+a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+p{
+    color:white;
+    text-shadow:
+        0 0 10px #42e72f,
+        0 0 20px #053130;
+} 
+
+.houses{
+    margin-top:120px;
+    margin-bottom:50px;
+}
+
+.footer{
+    width:100%;
+    margin-top:auto;
+}
+.footer{ 
+background: linear-gradient( 135deg, #01474b, #0b054f, #41065e ); 
+color: white;
+padding: 40px 0px;
+bottom: 40px;;
+font-family: Arial, sans-serif;
+box-shadow: 0 -5px 20px rgba(0,0,0,0.3); }
+.footer-container{
+ max-width: 1200px; margin: auto; 
+display: flex; 
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 30px; } 
+.footer-section{ flex: 1;
+min-width: 250px;
+}
+      .footer-section h2
+      { color: #42e72f;
+         margin-bottom: 15px; 
+        } 
+      .footer-section p{
+         margin: 10px 0;
+          line-height: 1.6;
+         } 
+
+      .footer-section a{ 
+        color: white;
+         text-decoration: none;
+         }
+       .footer-section a:hover{
+         color: #42e72f;
+         } .footer-bottom{
+             text-align: center;
+        margin-top: 30px;
+         padding-top: 20px;
+          border-top: 1px solid rgba(255,255,255,0.2);
+        font-size: 14px; }
+</style>
+</head>
+
+<body>
+
+<h1><u>JAY AMOUR EMPIRE</u></h1>
+
+<div class="houses">
+
+    <h2>SELL & RENT</h2>
+
+    <!-- First Row -->
+    <div class="house-row">
+
+        <div class="house-card">
+            <img src="house1.jpg" alt="House 1"><br><br>
+            <p>Modern House for sale in Kabeza Near Kumucyo</p><br>
+            <button><a href="sample.html">Show More</a></button>
+        </div>
+        <div class="house-card">
+            <img src="house2.jpg" alt="House 2"><br><br>
+                 <p>Modern House for Buy in Kicukiro Near sonatube</p><br>
+            <button><a href="sample1.html">Show More</a></button>
+        </div>
+        <div class="house-card">
+            <img src="house3.jpg" alt="House 3"><br><br>
+                <p>Modern House for Rent in Kabuga Near Muyumbu</p><br>
+            <button><a href="sample2.html">Show More</a></button>
+        </div>
+    </div>
+<br><br> 
+    <!-- Second Row -->
+    <div class="house-row">
+
+        <div class="house-card">
+            <img src="house4.jpg" alt="House 4"><br><br>
+                 <p>Modern House for Buy in Kacyiru Near Minagri</p><br>
+            <button><a href="sample3.html">Show More</a></button>
+        </div>
+        <div class="house-card">
+            <img src="house5.jpg" alt="House 5"><br><br>
+                 <p>Modern House for Rent in Nyarutarama Near Golf </p><br>
+           <button><a href="sample4.html">Show More</a></button>
+        </div>
+        <div class="house-card">
+            <img src="house6.jpg" alt="House 6"><br><br>
+             <p>Modern House for Sale in Nyarugenge Near Stadium/p><br>
+            <button><a href="sample5.html">Show More</a></button>
+        </div>
+    </div>
+</div>
+ <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-section">
+                <h2>JAY AMOUR EMPIRE</h2>
+                <p>
+                    Your trusted real estate platform for buying,
+                    selling, and renting houses across Rwanda.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Contact Us</h2>
+                <p>📧 Email:
+                    <a href="mailto:amour6jay@gmail.com">
+                        amour6jay@gmail.com
+                    </a>
+                </p>
+
+                <p>📞 Phone:
+                    <a href="tel:+250795573098">
+                        0795573098
+                    </a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Address</h2>
+                <p>📍 Kigali, Rwanda</p>
+                <p>Street Code: Kigali, Rwanda</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 JAY AMOUR EMPIRE. All Rights Reserved.
+        </div>
+
+    </footer>
+</body>
+</html>

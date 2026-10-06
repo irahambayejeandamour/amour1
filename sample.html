@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #01474b,
+        #0b054f,
+        #41065e,
+        #ffe5ec
+    );
+}
+
+h1{
+    position:absolute;
+    top:30px;
+    color:white;
+    font-size:3rem;
+    text-shadow:
+    0 0 10px #42e72f,
+    0 0 20px #053130;
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    50%{
+        transform:scale(1.05);
+    }
+}
+.search-box{
+    width:90%;
+    max-width:1000px;
+    margin:120px auto 30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+.search-box input,
+.search-box select{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    width:220px;
+    font-size:16px;
+}
+
+.search-box button{
+    padding:14px 30px;
+    border:none;
+    border-radius:10px;
+    background:#42e72f;
+    color:black;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.search-box button:hover{
+    transform:scale(1.05);
+    box-shadow:0 10px 20px rgba(66,231,47,.5);
+}
+.property-card{
+    width: 450px;
+    margin: 30px auto;
+    margin-top:100px;
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        #01474b,
+        #015ba9,
+        #41065e,
+        #2c346c
+    );
+    color: white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transition: 0.4s ease;
+    font-family: Arial, sans-serif;
+}
+
+.property-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+
+.property-title{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px #42e72f;
+}
+
+.property-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.property-info span:first-child{
+    font-weight: bold;
+    color: #42e72f;
+}
+
+.price{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #42e72f;
+    text-shadow: 0 0 10px rgba(66,231,47,0.5);
+}
+
+.contact-btn{
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    background: linear-gradient(45deg, #42e72f, #b8ff6a);
+    box-shadow: 0 8px 20px rgba(66,231,47,0.4);
+    transition: all .4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,.5);
+    transform: skewX(-25deg);
+    transition: .7s;
+}
+
+.contact-btn:hover::before{
+    left: 150%;
+}
+
+.contact-btn:hover{
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(66,231,47,.6);
+    background: linear-gradient(45deg,#52ff3d,#d6ff85);
+}
+
+.contact-btn:active{
+    transform: scale(.97);
+}
+
+.contact-btn a{
+    text-decoration:none;
+    color: #000;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+a{
+     text-decoration:none;
+}
+.property-card{
+    margin-top:120px;
+    margin-bottom:50px;
+}
+
+.map-btn{
+    display:block;
+    width:100%;
+    margin-top:15px;
+    padding:15px;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    border-radius:40px;
+    background:linear-gradient(45deg,#4285F4,#34A853);
+    transition:.4s;
+}
+
+.map-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(52,168,83,.5);
+}
+.footer{
+    width:100%;
+}
+.footer{ 
+background: linear-gradient( 135deg, #01474b, #0b054f, #41065e ); 
+color: white;
+ padding: 40px 0px;
+ bottom: 40px;;
+  margin-top: 10px;
+   font-family: Arial, sans-serif;
+   box-shadow: 0 -5px 20px rgba(0,0,0,0.3); }
+    .footer-container
+    { max-width: 1200px; margin: auto; 
+    display: flex; 
+    justify-content: space-between;
+     flex-wrap: wrap;
+     gap: 30px; } 
+     .footer-section{ flex: 1;
+         min-width: 250px;
+         }
+      .footer-section h2
+      { color: #42e72f;
+         margin-bottom: 15px; 
+        } 
+      .footer-section p{
+         margin: 10px 0;
+          line-height: 1.6;
+         } 
+
+      .footer-section a{ 
+        color: white;
+         text-decoration: none;
+         }
+       .footer-section a:hover{
+         color: #42e72f;
+         } .footer-bottom{
+             text-align: center;
+
+        margin-top: 30px;
+         padding-top: 20px;
+          border-top: 1px solid rgba(255,255,255,0.2);
+        font-size: 14px; }
+</style>
+<script>
+function searchProperty(){
+
+    let location =
+    document.getElementById("location").value.toLowerCase();
+    let bedrooms =
+    document.getElementById("bedrooms").value;
+    let price =
+    document.getElementById("price").value;
+    let cards =
+    document.querySelectorAll(".property-card");
+    cards.forEach(function(card){
+        let cardLocation =
+        card.dataset.location.toLowerCase();
+        let cardBedrooms =
+        card.dataset.bedrooms;
+        let cardPrice =
+        parseInt(card.dataset.price);
+
+        let show = true;
+
+        if(location &&
+           !cardLocation.includes(location))
+        {
+            show = false;
+        }
+
+        if(bedrooms &&
+           cardBedrooms != bedrooms)
+        {
+            show = false;
+        }
+
+        if(price &&
+           cardPrice > parseInt(price))
+        {
+            show = false;
+        }
+
+        if(show){
+            card.style.display="block";
+        }else{
+            card.style.display="none";
+        }
+
+    });
+
+}
+</script>
+<body>
+
+    <h1><u>JAY AMOUR EMPIRE</u></h1>
+
+    <div class="property-card"
+     data-location="kabeza"
+     data-bedrooms="4"
+     data-price="100000000">
+        <div class="property-title">
+            Modern House for Sale in Kabeza Near Kumucyo
+        </div>
+        <div class="property-info" >
+            <span>Advert:</span>
+            <span>Sale</span>
+        </div>
+        <div class="property-info">
+            <span>Type:</span>
+            <span>House</span>
+        </div>
+        <div class="property-info">
+            <span>Bedrooms:</span>
+            <span>4</span>
+        </div>
+        <div class="property-info"
+         ></div>
+        <div class="property-info"
+        >
+    <span>Location:</span>
+    <span>Kabeza, Kigali</span>
+</div>
+<a href="https://www.google.com/maps/search/?api=1&query=Kabeza+Kigali+Rwanda"
+   target="_blank"
+   class="map-btn">
+   📍 View on Google Maps
+</a>
+          <div class="price">
+            100,000,000 RWF
+          </div><div class="search-box">
+    <input type="text"
+           id="location"
+           placeholder="Search by location">
+    <select id="bedrooms">
+        <option value="">Any Bedrooms</option>
+        <option value="1">1 Bedroom</option>
+        <option value="2">2 Bedrooms</option>
+        <option value="3">3 Bedrooms</option>
+        <option value="4">4 Bedrooms</option>
+        <option value="5">5+ Bedrooms</option>
+    </select>
+
+    <input type="number"
+           id="price"
+           placeholder="Maximum Price (RWF)">
+
+    <button onclick="searchProperty()">
+        Search
+    </button>
+</div>
+        <button class="contact-btn">
+    <a href="https://wa.me/250795573098?text=Hello,%20I%20am%20interested%20in%20this%20property.%20Can%20you%20provide%20more%20details?" target="_blank">
+        Contact Agent </a></button>
+<h3 style="margin-top:20px;text-align:center;">📍 Property Location</h3>
+<iframe
+    src="https://www.google.com/maps?q=Kabeza,Kigali,Rwanda&output=embed"
+    width="100%"
+    height="300"
+    style="border:0;border-radius:15px;margin-top:15px;"
+    allowfullscreen=""
+    loading="lazy">
+</iframe>
+    <a href="example1.html">
+        <button class="contact-btn">Back </button></a>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+              <h2>JAY AMOUR EMPIRE</h2>
+                <p>
+                    Your trusted real estate platform for buying,
+                    selling, and renting houses across Rwanda.
+                </p>
+    </div>
+   <div class="footer-section">
+    <h2>Contact Us</h2>
+     <p>📧 Email:
+ <a href="mailto:amour6jay@gmail.com">
+                        amour6jay@gmail.com
+                    </a>
+                </p>
+
+                <p>📞 Phone:
+                    <a href="tel:+250795573098">
+                        0795573098
+                    </a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h2>Address</h2>
+                <p>📍 Kigali, Rwanda</p>
+                <p>Street Code: Kigali, Rwanda</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 JAY AMOUR EMPIRE. All Rights Reserved.
+        </div>
+
+    </footer>
+</body>
+</html>
